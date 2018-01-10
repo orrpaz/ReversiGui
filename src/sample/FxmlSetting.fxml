@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane prefHeight="388.0" prefWidth="600.0" style="-fx-background-radius: 10;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SettingsController">
+    <children>
+        <Label alignment="CENTER" prefHeight="44.0" prefWidth="140.0" text="Settings" textFill="#791079" GridPane.columnIndex="1">
+            <font>
+                <Font size="34.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="player1Color" prefHeight="25.0" prefWidth="184.0" promptText="-" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <ComboBox fx:id="player2Color" prefHeight="25.0" prefWidth="183.0" promptText="-" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <ComboBox fx:id="openPlayer" prefHeight="25.0" prefWidth="183.0" promptText="-" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <ComboBox fx:id="boardSize" onAction="#initialize" prefHeight="25.0" prefWidth="183.0" promptText="-" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label prefHeight="20.0" prefWidth="149.0" text="Board size:" GridPane.rowIndex="1">
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+        <Label prefHeight="20.0" prefWidth="166.0" text="1st player color:" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+        <Label text="2nd player color:" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+        <Label text="Who open the game? " GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Button fx:id="srart" mnemonicParsing="false" prefHeight="25.0" prefWidth="85.0" text="Start" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+    </children>
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="600.0" minWidth="10.0" prefWidth="224.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="600.0" minWidth="10.0" prefWidth="225.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="333.0" minWidth="0.0" prefWidth="151.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="107.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="182.0" minHeight="0.0" prefHeight="55.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="253.0" minHeight="0.0" prefHeight="60.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="253.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="253.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="253.0" minHeight="10.0" prefHeight="112.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+</GridPane>
