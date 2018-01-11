@@ -10,15 +10,10 @@
 
 <GridPane prefHeight="388.0" prefWidth="600.0" style="-fx-background-radius: 10;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SettingsController">
     <children>
-        <Label alignment="CENTER" prefHeight="44.0" prefWidth="140.0" text="Settings" textFill="#791079" GridPane.columnIndex="1">
-            <font>
-                <Font size="34.0" />
-            </font>
-        </Label>
-        <ComboBox fx:id="player1Color" prefHeight="25.0" prefWidth="184.0" promptText="-" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-        <ComboBox fx:id="player2Color" prefHeight="25.0" prefWidth="183.0" promptText="-" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-        <ComboBox fx:id="openPlayer" prefHeight="25.0" prefWidth="183.0" promptText="-" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-        <ComboBox fx:id="boardSize" onAction="#initialize" prefHeight="25.0" prefWidth="183.0" promptText="-" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <ComboBox fx:id="player1Color" prefHeight="25.0" prefWidth="184.0" promptText="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+        <ComboBox fx:id="player2Color" prefHeight="25.0" prefWidth="183.0" promptText="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+        <ComboBox fx:id="openPlayer" prefHeight="25.0" prefWidth="183.0" promptText="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+        <ComboBox fx:id="boardSize" onAction="#initialize" prefHeight="25.0" prefWidth="183.0" promptText="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
         <Label prefHeight="20.0" prefWidth="149.0" text="Board size:" GridPane.rowIndex="1">
          <padding>
             <Insets left="10.0" />
@@ -40,14 +35,19 @@
          <font>
             <Font size="16.0" />
          </font></Label>
-        <Label text="Who open the game? " GridPane.rowIndex="4">
+        <Label prefHeight="20.0" prefWidth="202.0" text="Who open? " GridPane.rowIndex="4">
          <GridPane.margin>
             <Insets left="10.0" />
          </GridPane.margin>
          <font>
             <Font size="16.0" />
          </font></Label>
-      <Button fx:id="srart" mnemonicParsing="false" prefHeight="25.0" prefWidth="85.0" text="Start" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+      <Button fx:id="srart" mnemonicParsing="false" onAction="#exitFromSetting" prefHeight="25.0" prefWidth="85.0" text="Start" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+      <Label fx:id="SettingText" prefHeight="57.0" prefWidth="221.0" text="settings" textFill="#7e40a8" GridPane.columnIndex="1">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
     </children>
     <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" maxWidth="600.0" minWidth="10.0" prefWidth="224.0" />

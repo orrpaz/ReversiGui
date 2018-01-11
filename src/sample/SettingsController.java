@@ -42,7 +42,8 @@ public class SettingsController  {
         openPlayer.setItems(playersList);
     }
 
-    private void writeToFile(){
+    private void writeToFile(String size,
+                             String color1, String color2, String startPlayer){
         Writer writer = null;
 
         try {
@@ -63,5 +64,9 @@ public class SettingsController  {
                 e.printStackTrace();
             }
         }
+    }
+    public void exitFromSetting(){
+        writeToFile(openPlayer.getValue(),player1Color.getValue(), player2Color.getValue(),boardSize.getValue());
+
     }
 }

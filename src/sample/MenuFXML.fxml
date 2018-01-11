@@ -18,7 +18,7 @@
             </Text>
             <Button layoutX="117.0" layoutY="173.0" mnemonicParsing="false" text="Start Game" />
             <Button layoutX="125.0" layoutY="229.0" mnemonicParsing="false" text="Settings" />
-            <Text layoutX="429.0" layoutY="383.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Created by Or &amp; Amir" wrappingWidth="194.435546875" />
+            <Text layoutX="283.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Created by Or &amp; Amir" wrappingWidth="194.435546875" />
          </children>
       </Pane>
    </children>
