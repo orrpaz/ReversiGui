@@ -1,3 +1,4 @@
+package theGame;
 import java.awt.Point;
 
 public class Board {
@@ -8,7 +9,13 @@ public class Board {
     private Cell[][] board;
     
    // enum Value {Black,Empty,White};
-    
+
+    /**
+     * constructor
+     * @param s - size
+     * @param p1 - Value player
+     * @param p2 - Value player
+     */
     Board(int s, Value p1, Value p2) {
         this.size = s;
         this.p1Token = p1;
@@ -17,6 +24,23 @@ public class Board {
         initialize();
         startMode(p1Token, p2Token);
     }
+
+    /**
+     * constructor
+     * @param s - size
+     */
+    public Board(int s) {
+        this.size = s;
+        this.p1Token = Value.PlayerX;
+        this.p2Token = Value.PlayerO;
+        
+        initialize();
+        startMode(p1Token, p2Token);
+    }
+
+    /**
+     * initialize the board.
+     */
     void initialize() {
         //Allocates a 2d matrix
         board = new Cell[size][]; // size-times array of cells
@@ -29,19 +53,38 @@ public class Board {
             }
         }
     }
-    
-    Value getP1() {
+
+    /**
+     * get function.
+     * @return get function.
+     */
+    public Value getP1() {
         return p1Token;
     }
-    Value getP2() {
+    /**
+     * get function.
+     * @return get function.
+     */
+    public Value getP2() {
         return p2Token;
     }
+    /**
+     * get function.
+     * @return get function.
+     */
     Value getOpponent(Value x) {
         return p1Token == x? p2Token: p1Token;
     }
-    int getSize() {
+    /**
+     * get function.
+     * @return get function.
+     */
+    public int getSize() {
         return size;
     }
+    /**
+     * clear thr board.
+     */
     void clear() {
         //Set empty cells
         for (int x = 0;x < size;x++) {
@@ -50,7 +93,12 @@ public class Board {
             }
         }
     }
-    
+
+    /**
+     * put Value for the begining.
+     * @param p1Token - Value player
+     * @param p2Token - Value player
+     */
     void startMode(Value p1Token, Value p2Token) {
         board[(size / 2) - 1][(size / 2) - 1].setSign(p2Token);
         board[size / 2][size / 2].setSign(p2Token);
@@ -66,7 +114,7 @@ public class Board {
         board[(int) c.getX()][(int) c.getY()].setSign(player);
      }
   //Returns the board
-    Value getValue(int row, int col) {
+    public Value getValue(int row, int col) {
         return board[row][col].getSign();
     }
   //Returns if the board is full
@@ -80,7 +128,11 @@ public class Board {
         }
         return true;
     }
-    
+    /**
+     * return the score.
+     * @param player - player
+     * @return return the score.
+     */
     int score(Value player) {
         Value opponent = getOpponent(player);
         int score = 0;
@@ -91,6 +143,24 @@ public class Board {
                     score++;
                 } else if (val == opponent) {
                     score--;
+                }
+            }
+        }
+        return score;
+    }
+
+    /**
+     * return the score.
+     * @param player - player
+     * @return return the score.
+     */
+    public int getPlayerScore(Value player) {
+        int score = 0;
+        for (int row = 0; row < size; row++) {
+            for (int col = 0; col < size; col++) {
+                Value val = board[row][col].getSign();
+                if (val == player) {
+                    score++;
                 }
             }
         }

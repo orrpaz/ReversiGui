@@ -1,0 +1,21 @@
+.root {
+    -fx-background-image: url("../image/background.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 900 506;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+}
+.label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+.button {
+    -fx-text-fill: #232323;
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#53840c, #b5b542);
+}
+#SettingText{
+    -fx-font-size: 30px;
+    -fx-font-family: Arial;
+    -fx-fill: rgb(85,87,83);
+}

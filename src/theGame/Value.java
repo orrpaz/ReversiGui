@@ -1,6 +1,11 @@
+package theGame;
+
+/**
+ * enum Value.
+ */
 public enum Value {
       //Black, White, Empty;
-    Black('X'), White('O'), Empty(' ');
+    PlayerX('X'), PlayerO('O'), Empty(' ');
     private char value;
     private Value(char value) { 
         this.value = value;
